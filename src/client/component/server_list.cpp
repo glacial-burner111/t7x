@@ -138,8 +138,8 @@ namespace server_list
 
 	bool get_master_server(game::netadr_t& address)
 	{
-		address = network::address_from_string("server.alterware.dev:20810");
-		return address.type != game::NA_BAD;
+		address.type = game::NA_BAD;
+		return false;
 	}
 
 	void request_servers(callback callback)
